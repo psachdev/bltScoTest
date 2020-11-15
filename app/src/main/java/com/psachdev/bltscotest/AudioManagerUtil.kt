@@ -26,7 +26,7 @@ class AudioManagerUtil(private val context: Context) {
         context.registerReceiver(scoStateChangeListener, intentFilter)
     }
 
-    fun unRegisterReceiver(){
+    fun unRegisterBltScoStateChangeListener(){
         if(::scoStateChangeListener.isInitialized) {
             context.unregisterReceiver(scoStateChangeListener)
         }

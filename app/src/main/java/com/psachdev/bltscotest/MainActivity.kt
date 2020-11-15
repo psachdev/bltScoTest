@@ -10,5 +10,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mAudioManagerUtil = AudioManagerUtil(this)
+        mAudioManagerUtil.registerForBltScoStateChangeListener(ScoStateChangeListener())
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mAudioManagerUtil.unRegisterBltScoStateChangeListener()
     }
 }

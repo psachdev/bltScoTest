@@ -20,6 +20,5 @@ class ScoStateChangeListener : BroadcastReceiver() {
                 Toast.makeText(context, context.getString(R.string.sco_unknown_state), Toast.LENGTH_SHORT).show()
             }
         }
-
     }
 }
