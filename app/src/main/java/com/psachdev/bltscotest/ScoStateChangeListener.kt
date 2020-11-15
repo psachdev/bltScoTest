@@ -4,9 +4,10 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.media.AudioManager
+import android.widget.TextView
 import android.widget.Toast
 
-class ScoStateChangeListener : BroadcastReceiver() {
+class ScoStateChangeListener(private val textView: TextView) : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         val state = intent.getIntExtra(AudioManager.EXTRA_SCO_AUDIO_STATE, -1)
         when {

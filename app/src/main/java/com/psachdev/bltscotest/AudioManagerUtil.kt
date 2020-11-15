@@ -16,8 +16,8 @@ class AudioManagerUtil(private val context: Context) {
         mAudioManager.stopBluetoothSco()
     }
 
-    fun isBltScoOn(){
-        mAudioManager.isBluetoothScoOn
+    fun isBltScoOn(): Boolean{
+        return mAudioManager.isBluetoothScoOn
     }
 
     fun registerForBltScoStateChangeListener(scoStateChangeListener: ScoStateChangeListener){
